@@ -1,4 +1,4 @@
-# dist-to-lineseg
+# point-lineseg-distance
 
 Calculates the minimum 2D distance from a point to a line segment.
 
@@ -8,10 +8,12 @@ If you consider your point a circle and/or the caps of your line segment as roun
 
 Usage:
 
-    var distance = distToLineSeg(
+    var pldist = require('point-lineseg-distance');
+
+    var distance = pldist(
+        0.2, -0.3, // point
 	    -1, -1,    // line endpoint 1
-		1, 1,      // line endpoint 2
-		0.2, -0.3  // point
+		1, 1       // line endpoint 2
 	);
 
     if( distance < pointRadius + halfLineThickness ) {
